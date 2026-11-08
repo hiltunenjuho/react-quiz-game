@@ -61,7 +61,7 @@ And looking to add other technologies on the way.
 src/
 ├── components/       # Reusable interface components
 ├── data/             # Quiz questions
-├── App.jsx           # Main app and quiz flow
+├── App.tsx           # Main app and quiz flow
 └── index.css         # Global styles
 ```
 
