@@ -39,6 +39,7 @@ function App() {
       <h5>A REACT PROJECT</h5>
 
       <h4>Question {currentQuestionIndex + 1}/{questionAmount}</h4>
+      <h3>Category: {currentQuestion.category}</h3>
       <h2>{currentQuestion.question}</h2>
 
       {currentQuestion.answers.map(answer => (
@@ -64,6 +65,14 @@ function App() {
       <h1>Game Over!</h1>
       <h2>Thank you for playing!</h2>
       <h1>Final Score: {score} / {questionAmount}</h1>
+      <button
+        onClick={() => {
+          setCurrentQuestionIndex(0);
+          setScore(0);
+        }}
+      >
+        Play Again
+      </button>
     </div>
   );
 };
