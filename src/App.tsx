@@ -19,12 +19,16 @@ function App() {
   };
   
   function handleAnswer(answer: string, correctAnswer: string) {
-    console.log(answer);
     setCurrentQuestionIndex(currentQuestionIndex + 1);
 
-    if (answer === correctAnswer) {
-    setScore(previousScore => previousScore + 1);
-    }
+    const isCorrect = answer === correctAnswer;
+
+    if (isCorrect) {
+    setScore(prev => prev + 1);
+    console.log("User answered:", answer, "which was CORRECT");
+    } else {
+      console.log("User answered:", answer,"which was WRONG");
+    };
   };
 
   if (currentQuestionIndex !== questionAmount)
