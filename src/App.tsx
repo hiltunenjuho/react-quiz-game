@@ -4,10 +4,18 @@ import { questions } from './data/questions';
 
 function App() {
 
+  const [gameState, setGameState] = useState("start");
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [score, setScore] = useState(0);
+  const [highScore, setHighScore] = useState(0);
   const currentQuestion = questions[currentQuestionIndex];
   const questionAmount = questions.length;
+
+  function startNewGame() {
+    setGameState("start");
+    setCurrentQuestionIndex(0);
+    setScore(0);
+  }
 
   function difficultyName(): string {
     if (currentQuestion.difficulty === 1) return "Very Easy";
@@ -16,28 +24,50 @@ function App() {
     if (currentQuestion.difficulty === 4) return "Hard";
     if (currentQuestion.difficulty === 5) return "Very Hard";
     return "Unknown";
-  };
+  }
   
   function handleAnswer(answer: string, correctAnswer: string) {
-    setCurrentQuestionIndex(currentQuestionIndex + 1);
-
     const isCorrect = answer === correctAnswer;
+    let newScore = score;
 
     if (isCorrect) {
-    setScore(prev => prev + 1);
-    console.log("User answered:", answer, "which was CORRECT");
-    } else {
-      console.log("User answered:", answer,"which was WRONG");
-    };
-  };
+      newScore = score + 1;
+      setScore(newScore);
+    }
 
-  if (currentQuestionIndex !== questionAmount)
+    if (newScore > highScore) {
+      setHighScore(newScore);
+    }
+
+    const isLastQuestion =
+      currentQuestionIndex === questionAmount - 1;
+
+    if (isLastQuestion) {
+      setGameState("gameover");
+      return;
+    }
+
+    setCurrentQuestionIndex(prev => prev + 1);
+  }
+
+
+  // RENDER:
+  // RENDER:
+  // RENDER:
+
+  if (gameState === "start")
   return (
     <div>
-
       <h1>Quiz Game</h1>
       <h5>A REACT PROJECT</h5>
+      <h3>Current High Score: {highScore} / {questionAmount}</h3>
+      <button onClick={() => setGameState("playing")}>Start Game</button>
+    </div>
+  )
 
+  if (gameState === "playing")
+  return (
+    <div>
       <h4>Question {currentQuestionIndex + 1}/{questionAmount}</h4>
       <h3>Category: {currentQuestion.category}</h3>
       <h2>{currentQuestion.question}</h2>
@@ -58,20 +88,17 @@ function App() {
 
       <h4>Current Score: {score}</h4>
     </div>
-  );
+  )
 
+  if (gameState === "gameover")
   return (
     <div>
       <h1>Game Over!</h1>
       <h2>Thank you for playing!</h2>
       <h1>Final Score: {score} / {questionAmount}</h1>
-      <button
-        onClick={() => {
-          setCurrentQuestionIndex(0);
-          setScore(0);
-        }}
-      >
-        Play Again
+      <h3>Current High Score: {highScore} / {questionAmount}</h3>
+      <button onClick={(startNewGame)}>
+        Play Again!
       </button>
     </div>
   );
