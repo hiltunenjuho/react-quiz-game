@@ -1,6 +1,6 @@
 <div align="center">
 
-# 🎯 React Quiz Game
+# 🎯 knowdium!
 
 **A fun, responsive quiz game built with React — developed one stage at a time.**
 
@@ -11,7 +11,7 @@
 
 ## 📖 About
 
-React Quiz Game is a frontend project for creating and playing quizzes. Its development is organized into small milestones, starting with a playable quiz and gradually adding polish and optional features.
+knowdium! is a frontend project for creating and playing quizzes. Its development is organized into small milestones, starting with a playable quiz and gradually adding polish and optional features.
 
 > **Note:** The stages below are a development plan. They do not imply that these features are already implemented.
 

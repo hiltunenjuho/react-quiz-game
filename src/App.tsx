@@ -59,7 +59,7 @@ function App() {
   return (
     <div>
       <h1>Quiz Game</h1>
-      <h5>A REACT PROJECT</h5>
+      <h5>A REACT PROJECT by Juho Hiltunen</h5>
       <h3>Current High Score: {highScore} / {questionAmount}</h3>
       <button onClick={() => setGameState("playing")}>Start Game</button>
     </div>
