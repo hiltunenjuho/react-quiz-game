@@ -1,76 +1,63 @@
-<div align="center">
+# knowdium!
 
-# 🎯 knowdium!
+**A game-first trivia prototype built with React.** Knowdium is being developed for quick, playful rounds and challenge—not as a learning platform.
 
-**A fun, responsive quiz game built with React — developed one stage at a time.**
+## Current prototype
 
-![Status](https://img.shields.io/badge/status-in%20development-orange)
-![React](https://img.shields.io/badge/React-project-blue)
+The app currently includes:
 
-</div>
+- A locally defined set of 12 multiple-choice questions across several categories.
+- Four answer choices per question, with category and difficulty shown during play.
+- A sequential round, score tracking, a results screen, and a replay action.
+- A high score that remains in memory while the page is open.
 
-## 📖 About
+Question content is currently stored in `src/data/questions.ts`. The prototype does not yet include answer-by-answer feedback, category selection, randomized rounds, persistent scores, or a backend.
 
-knowdium! is a frontend project for creating and playing quizzes. Its development is organized into small milestones, starting with a playable quiz and gradually adding polish and optional features.
+## Technology
 
-> **Note:** The stages below are a development plan. They do not imply that these features are already implemented.
+- React 19 and TypeScript
+- Vite
+- CSS
+- npm
 
-## ✨ Planned features
+## Run locally
 
-- Multiple-choice questions
-- Feedback after submitting an answer
-- Question progress and score tracking
-- Results screen with a replay option
-- Responsive layout for desktop and mobile
-- Optional additions such as categories, a timer, and saved high scores
+Requires Node.js and npm.
 
-## 🧭 Development roadmap
+```bash
+npm ci
+npm run dev
+```
 
-### Stage 1 — Build the foundation
-- Set up the React app and basic page layout.
-- Display a question and its answer choices.
-- Store a small set of questions locally.
+Create and preview a production build:
 
-### Stage 2 — Implement the quiz flow
-- Track the selected answer and current question.
-- Provide answer feedback and advance through questions.
-- Calculate and show the final score.
+```bash
+npm run build
+npm run preview
+```
 
-### Stage 3 — Polish the experience
-- Refine colors, typography, spacing, and interaction states.
-- Support smaller screens and keyboard navigation.
-- Add semantic markup and visible focus indicators.
+Run the configured linter:
 
-### Stage 4 — Add optional features
-- Let players choose a category or difficulty.
-- Consider a timer, shuffled questions, or high scores.
-- Persist preferences or scores if useful for the project.
+```bash
+npm run lint
+```
 
-## 🛠️ Tech stack
-
-- **React** — user interface
-- **TypeScript** — type safety and improved developer experience
-- **CSS** — styling
-- **Vite** — dev environment
-- **npm** — dependency management
-And looking to add other technologies on the way.
-
-## 📁 Suggested structure
+## Project structure
 
 ```text
 src/
-├── components/       # Reusable interface components
-├── data/             # Quiz questions
-├── App.tsx           # Main app and quiz flow
-└── index.css         # Global styles
+├── App.tsx
+├── App.css
+├── index.css
+├── data/
+│   ├── questions.ts
+│   └── types/
+│       └── Question.ts
+└── main.tsx
 ```
 
-Adapt this structure to the existing project setup as it grows.
+## Next development focus
 
-## 🤝 Contributing
-
-Choose a roadmap stage, keep changes focused, and update this README as features are completed.
-
-## 📄 License
+The next useful steps are to expand the question set, make answer feedback and round state clearer, improve responsive and keyboard-accessible play, and decide whether scores should persist between visits. These are future directions, not features of the current prototype.
 
 No license has been specified yet.
