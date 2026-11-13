@@ -1,0 +1,8 @@
+.brandLogo {
+  font-family: "Honk", system-ui;
+  font-size: clamp(3rem, 12vw, 7rem);
+  font-variation-settings: "MORF" 15, "SHLN" 50;
+  font-weight: 400;
+  line-height: 1;
+  margin-block: 0.25em;
+}
