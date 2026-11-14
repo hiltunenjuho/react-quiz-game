@@ -2,6 +2,13 @@
 
 **A game-first trivia prototype built with React.** Knowdium is being developed for quick, playful rounds and challenge—not as a learning platform.
 
+## Prototype screenshot
+
+<p align="center">
+  <img src="./docs/screenshots/knowdium-question.png" alt="Knowdium prototype showing a geography question and four answer choices" width="100%">
+</p>
+<p align="center"><em>An early gameplay view from the current local prototype.</em></p>
+
 ## Current prototype
 
 The app currently includes:
