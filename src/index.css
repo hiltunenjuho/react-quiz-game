@@ -2,11 +2,29 @@
   box-sizing: border-box;
 }
 
-body {
-  margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
+html {
+  min-width: 320px;
+  min-height: 100%;
+  scroll-behavior: smooth;
 }
 
-#root {
+body {
+  min-width: 320px;
   min-height: 100vh;
+  margin: 0;
+  font-family: "DM Sans", "Segoe UI", sans-serif;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+button,
+select {
+  font-family: inherit;
+}
+
+::selection {
+  color: #fff;
+  background: #7633c9;
 }

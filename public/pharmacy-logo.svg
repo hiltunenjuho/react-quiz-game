@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="350" height="350" viewBox="0 0 350 350" role="img" aria-labelledby="logo-title">
+  <title id="logo-title">Pharmacy Finder</title>
+  <rect width="350" height="350" rx="100" fill="#1F1F1F"/>
+  <path fill="#5AD38A" d="M116 88h30l-29 175H88z"/>
+  <path fill="#FFF" d="M234 88H262L243 210
+    C240 223 237 232 233 236
+    C227 249 214 259 203 260.5
+    C199 261.5 197 262 196 262
+    H181
+    C181 262 181 261.7 176 260.5
+    C163 257 155 248 153 233
+    C151 228 151 216 153 211
+    H181
+    C178 224 181 233 190 236
+    C193 238 199 236 203 233
+    C209 228 213 218 214 210
+    L234 88Z"/>
+</svg>
