@@ -2,6 +2,10 @@
 
 A multilingual trivia game built with React and the [Open Trivia Database](https://opentdb.com/).
 
+**[Play the live demo](https://hiltunenjuho.github.io/knowdium/)**
+
+![Knowdium's English-language desktop home page](./docs/knowdium-home.png)
+
 Choose Classic, Blitz, or Survival and customize the question count, category, difficulty, and question type. Scores and the personal best are tracked during play; the personal best is saved in browser storage.
 
 Classic has no time limit by default; an optional per-question limit can be selected in settings for the next game. Blitz and Survival keep their 12- and 15-second limits. Correct answers earn difficulty and streak points, with an additional speed bonus only when a timer is active.
@@ -41,3 +45,7 @@ Run the linter:
 ```bash
 npm run lint
 ```
+
+## Deployment
+
+The GitHub Actions workflow builds the app with Node.js 22 and publishes `dist` to GitHub Pages on pushes to `main`. The Vite base path is `/knowdium/`.
